@@ -5,7 +5,7 @@ CXX=g++
 CXXFLAG = --std=c++17 -Wall -Werror -Wextra -o
 
 #file name
-CXXFILENAME = main.cpp
+CXXFILENAME = src/two_link_fk.cpp
 
 #Target file
 Target = output
@@ -17,4 +17,5 @@ $(Target):$(CXXFILENAME)
 	$(CXX) $(CXXFLAG) $(Target) $(CXXFILENAME)
 
 #clean file
-clean: rm -rf $(Target)
+clean: 
+	rm -rf $(Target)
