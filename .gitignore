@@ -1,1 +1,5 @@
 output
+ref.md
+.cache
+build
+.vscode
