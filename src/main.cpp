@@ -1,10 +1,18 @@
-#include "fk.hpp"
+#include "robot_arm.hpp"
+#include <cmath>
+#include <cstddef>
 #include <iostream>
-constexpr double pi = 3.141592653589793;
-int main(){
-     std::vector<double> jointlen = {1,1};
-     std::vector<double> angleval = {pi/2,-pi/2};
-    Vec2 effectorpos= forwardKinematics(jointlen, angleval);
-    std::cout<<"final value("<<effectorpos.x<<","<<effectorpos.y<<")"<<"\n";
-    return 0;
+
+int main() {
+  RobotArm arm;
+  std::vector<Vec2> position;
+  arm.addSegment(1.0, 0);
+  arm.addSegment(1.0, 0);
+  arm.addSegment(1.0, 0);
+  position = arm.forwardKinematics();
+  position = arm.forwardKinematics();
+  for (size_t i = 0; i < position.size(); i++) {
+    std::cout << "(" << position[i].x << "," << position[i].y << ")" << "\n";
+  }
+  return 0;
 }

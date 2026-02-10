@@ -1,5 +1,5 @@
 output
 ref.md
 .cache
-build
+/build/
 .vscode
