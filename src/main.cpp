@@ -1,18 +1,13 @@
+#include "jacobian.hpp"
+#include "mat2.hpp"
 #include "robot_arm.hpp"
 #include <cmath>
 #include <cstddef>
 #include <iostream>
 
 int main() {
-  RobotArm arm;
-  std::vector<Vec2> position;
-  arm.addSegment(1.0, 0);
-  arm.addSegment(1.0, 0);
-  arm.addSegment(1.0, 0);
-  position = arm.forwardKinematics();
-  position = arm.forwardKinematics();
-  for (size_t i = 0; i < position.size(); i++) {
-    std::cout << "(" << position[i].x << "," << position[i].y << ")" << "\n";
-  }
+  Mat2 m1;
+  Jacobian j1;
+  m1 = j1.CalulateJacob(1.0, 1.1, M_PI / 2, -M_PI / 2);
   return 0;
 }
