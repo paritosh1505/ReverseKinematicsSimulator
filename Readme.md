@@ -7,3 +7,5 @@ Commit 3 -"Build a serial kinematic chain multiple N no of DOF".
 Commit 4- "Build forward kinematic for planar robrotic arm"  
 
 Commit 5- "Implemented 2*2 Jacobian Matrix for 2 link planar arm"
+
+Commit 6- "Compute Inverse Kinematics"
